@@ -17,24 +17,42 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form>
-        <div>
-          <label htmlFor="email">Endereço de e-mail</label>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh', // Centraliza verticalmente na tela inteira
+      }}
+    >
+     
+      <form
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          width: '100%',
+          maxWidth: '300px', // Largura máxima do conteúdo
+        }}
+      >
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+          <label for="email">Email:</label>
           <input
             type="email"
-            id="email"
+            name="email"
+            placeholder="Endereço de e-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
-        <div>
-          <label htmlFor="senha">Senha</label>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+          <label for="senha">Senha:</label>
           <input
             type="password"
-            id="senha"
+            name="senha"
+            placeholder="Senha"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
             required
