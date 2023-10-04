@@ -24,9 +24,9 @@ function Login({ onLogin }) {
         alignItems: 'center',
         justifyContent: 'center',
         minHeight: '100vh', // Centraliza verticalmente na tela inteira
+        fontFamily: 'Roboto, sans-serif', // Define a fonte para todos os elementos
       }}
     >
-     
       <form
         style={{
           display: 'flex',
@@ -37,7 +37,7 @@ function Login({ onLogin }) {
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-          <label for="email">Email:</label>
+        <label htmlFor="email" style={{ fontWeight: 'bold' }}>Email:</label>
           <input
             type="email"
             name="email"
@@ -45,10 +45,11 @@ function Login({ onLogin }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            style={{ marginBottom: '10px' }} 
           />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-          <label for="senha">Senha:</label>
+        <label htmlFor="senha" style={{ fontWeight: 'bold' }}>Senha:</label>
           <input
             type="password"
             name="senha"
@@ -56,9 +57,24 @@ function Login({ onLogin }) {
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
             required
+            style={{ marginBottom: '15px' }} 
           />
         </div>
-        <button type="button" onClick={handleLogin}>
+        <button
+          type="button"
+          onClick={handleLogin}
+          style={{
+            width: '60%', // Define a largura do botão igual à dos campos de entrada
+            marginTop: '10px',
+            backgroundColor: '#A020F0', // Cor roxa
+            color: '#fff',
+            border: 'none',
+            borderRadius: '25px', // Borda arredondada
+            padding: '10px',
+            cursor: 'pointer',
+            fontFamily: 'Roboto, sans-serif', // Define a fonte para todos os elementos
+          }}
+        >
           Entrar
         </button>
       </form>
