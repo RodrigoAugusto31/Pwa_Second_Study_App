@@ -37,7 +37,7 @@ function Login({ onLogin }) {
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-        <label htmlFor="email" style={{ fontWeight: 'bold' }}>Email:</label>
+        <label htmlFor="email" style={{ fontWeight: 'bold' }}>Login:</label>
           <input
             type="email"
             name="email"
